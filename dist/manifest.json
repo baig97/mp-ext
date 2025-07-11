@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Inventory Sync Extension",
+  "version": "1.0",
+  "description": "Syncs inventory every 15 mins from POS",
+  "permissions": ["alarms", "storage", "scripting"],
+  "host_permissions": [
+    "https://pos.moneypex.com/*",
+    "https://dpgultbqxxdttrjcatco.supabase.co/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Inventory Sync"
+  }
+}
