@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #1e2951;
+  background: #faf9f8;
+}
+
+.popup-container {
+  width: 350px;
+  min-height: 400px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e2951;
+}
+
+.logout-btn {
+  background: none;
+  border: 1px solid #e5e5e5;
+  color: #6b7280;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background: #f0f0f1;
+  border-color: #e5e5e5;
+}
+
+/* User Info */
+.user-info {
+  margin-bottom: 20px;
+  padding: 12px;
+  background: #f0f0f1;
+  border-radius: 6px;
+}
+
+.user-info p {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.user-info p:last-child {
+  margin-bottom: 0;
+}
+
+.store-name {
+  font-weight: 600;
+  color: #1e2951 !important;
+  font-size: 14px !important;
+}
+
+/* Email Not Confirmed */
+.email-not-confirmed {
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #ef4444;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.warning-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.email-not-confirmed h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ef4444;
+  margin-bottom: 12px;
+}
+
+.email-not-confirmed p {
+  color: #ef4444;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.email-not-confirmed p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info a {
+  color: #1e2951;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Login Form */
+.login-form {
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e2951;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #1e2951;
+  font-size: 13px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #ebebeb;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #f4d049;
+  box-shadow: 0 0 0 3px rgba(244, 208, 73, 0.1);
+}
+
+.form-group input:disabled {
+  background: #f0f0f1;
+  color: #6b7280;
+}
+
+.login-btn {
+  width: 100%;
+  background: #f4d049;
+  color: #0d1421;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: #e5c147;
+}
+
+.login-btn:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+/* Notification Subscription */
+.notification-subscription {
+  margin-top: 20px;
+}
+
+.notification-subscription h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e2951;
+  margin-bottom: 8px;
+}
+
+.description {
+  color: #6b7280;
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Subscribed Status */
+.subscribed-status {
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #22c55e;
+  border-radius: 8px;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.status-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #22c55e;
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.status-text {
+  font-weight: 600;
+  color: #22c55e;
+  font-size: 16px;
+}
+
+.status-description {
+  color: #22c55e;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Subscription Form */
+.subscription-form {
+  text-align: center;
+}
+
+.subscribe-btn {
+  background: #f4d049;
+  color: #0d1421;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.subscribe-btn:hover:not(:disabled) {
+  background: #e5c147;
+}
+
+.subscribe-btn:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+.permission-note {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Error Messages */
+.error {
+  background: #ffffff;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  text-align: center;
+}

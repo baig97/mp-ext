@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LootMart - Moneypex Inventory Sync Extension",
+  "version": "1.0",
+  "description": "Syncs inventory every 15 mins from POS",
+  "permissions": ["alarms", "storage", "scripting", "notifications"],
+  "host_permissions": [
+    "https://pos.moneypex.com/*",
+    "https://dpgultbqxxdttrjcatco.supabase.co/*",
+    "https://rickandmortyapi.com/*",
+    "https://fcm.googleapis.com/*",
+    "https://firebase.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "LootMart - Moneypex Inventory Sync",
+    "default_popup": "popup.html"
+  }
+}
