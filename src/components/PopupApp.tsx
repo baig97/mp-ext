@@ -52,6 +52,21 @@ const PopupApp: React.FC = () => {
           if (event === 'SIGNED_IN' && session?.user) {
             // Fetch merchant data after callback completes
             await fetchMerchantData(session.user.email!, session.user, session);
+            // Sync auth with background worker
+            try {
+              await new Promise<void>((resolve) => {
+                chrome.runtime.sendMessage({ action: 'syncAuth' }, (response) => {
+                  if (response?.success) {
+                    console.log('✅ Auth synced with background worker');
+                  } else {
+                    console.error('❌ Failed to sync auth with background worker:', response?.error);
+                  }
+                  resolve();
+                });
+              });
+            } catch (error) {
+              console.error('❌ Error syncing auth:', error);
+            }
           }
         }, 0);
       }

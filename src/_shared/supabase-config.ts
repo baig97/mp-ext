@@ -1,9 +1,7 @@
-import { createClient } from '@supabase/supabase-js';
+import { createSharedSupabaseClient } from './supabase-shared';
 
-const supabaseUrl = 'https://dpgultbqxxdttrjcatco.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRwZ3VsdGJxeHhkdHRyamNhdGNvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA5Mzg0NzIsImV4cCI6MjA2NjUxNDQ3Mn0.-IgB2vpHBAVR9o7JvyD-u6z8XvCJVI4jygz4acf-IIY';
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Use the shared client configuration
+export const supabase = createSharedSupabaseClient();
 
 // Types for our database
 export interface Merchant {
